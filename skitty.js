@@ -1,4 +1,19 @@
 // oneko.js: https://github.com/adryd325/oneko.js
+// skitty.js: https://github.com/mastubusa/webskitty
+// please check out the first github repo! if it weren't for them, i would be lost.
+
+// new additions start
+
+a = new Audio('https://github.com/matsubusa/webskitty/main/cry.mp3');
+window.setInterval(function () {
+  a.play();
+}, Math.random() * 500);
+
+// hear skitty SCREAM
+
+
+
+// new additions end
 
 (function oneko() {
   const isReducedMotion =
@@ -96,7 +111,7 @@
     nekoEl.style.top = `${nekoPosY - 16}px`;
     nekoEl.style.zIndex = Number.MAX_VALUE;
 
-    let nekoFile = "./oneko.gif"
+    let nekoFile = "./skitty.gif"
     const curScript = document.currentScript
     if (curScript && curScript.dataset.cat) {
       nekoFile = curScript.dataset.cat
@@ -212,6 +227,8 @@
 
     if (idleTime > 1) {
       setSprite("alert", 0);
+      var b = new Audio('https://github.com/matsubusa/webskitty/main/alert.wav');
+      b.play();
       // count down after being alerted before moving
       idleTime = Math.min(idleTime, 7);
       idleTime -= 1;
